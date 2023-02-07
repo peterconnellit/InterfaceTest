@@ -16,9 +16,10 @@ public class InterfaceTest {
         Pancake pancake = new Pancake();
         Card card = new Card();
 
-        leaf.turn();
-        page.turn();
-        pancake.turn();
-        card.turn();
+        Turnable[] turnables = new Turnable[]{leaf, page, pancake, card};
+
+        for (Turnable turnable : turnables) {
+            turnable.turn();
+        }
     }
 }
